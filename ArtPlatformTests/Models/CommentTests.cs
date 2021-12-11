@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ArtPlatform.Models
+namespace ArtPlatformTests.Models
 {
-    public class User
+    class CommentTests
     {
     }
 }

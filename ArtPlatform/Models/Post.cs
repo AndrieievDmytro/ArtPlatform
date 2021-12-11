@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    class Post
+    public class Post
     {
     }
 }
