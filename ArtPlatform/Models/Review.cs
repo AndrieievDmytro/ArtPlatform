@@ -7,20 +7,16 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models {
 
-    public class Favorite {
+    public class Review {
 
         [Required]
-        public User User { get; set; }
+        public Reviewer Reviewer { get; set; }
         [Required]
         public Post Post { get; set; }
 
-        public Favorite(User user, Post post) {
-            User = user;
+        public Review(Reviewer reviewer, Post post) {
+            Reviewer = reviewer;
             Post = post;
-        }
-
-        public void RemoveFromFavorites() { 
-            
         }
 
     }
