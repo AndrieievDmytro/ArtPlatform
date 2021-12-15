@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    class ReviewerRating
+    class ReviewerRating : Rating
     {
+        public ReviewerRating(int idRating, decimal ratingValue, string description)
+        {
+            IdRating = idRating;
+            RatingValue = ratingValue;
+            Description = description;
+        }
     }
 }
