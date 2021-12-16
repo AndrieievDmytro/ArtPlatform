@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    class Artist
+    public class Artist
     {
     }
 }

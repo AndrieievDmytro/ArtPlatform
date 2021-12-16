@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    class Promotion
+    public class Promotion
     {
         [Required]
         public int IdPromotion { get; set; }

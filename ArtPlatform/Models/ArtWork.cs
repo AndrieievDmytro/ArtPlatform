@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    class ArtWork
+    public class ArtWork
     {
         [Key]
         [Required]
@@ -27,7 +27,7 @@ namespace ArtPlatform.Models
         {
             IdArtwork = idArtwork;
             Artist = artist;
-            IdUser = artist.IdUser;
+            // IdUser = artist.IdUser;
             ArtType = artType;
             Description = description;
             Video = video;
