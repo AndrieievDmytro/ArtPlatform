@@ -10,6 +10,7 @@ namespace ArtPlatform.Models
     public class Purchase
     {
         [Required]
+        [Key]
         public int IdPurchase { get; set; }
         [Required]
         [Range(0, Int64.MaxValue)]

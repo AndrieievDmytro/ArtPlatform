@@ -16,7 +16,7 @@ namespace ArtPlatform.Models
         public int IdUser { get; set; }
         public string ArtType { get; set; }
         public string Description { get; set; }
-        // Photo and video as links
+        // Photos and videos as links of type string 
         public List<string> Video { get; set; }
         public List<string> Photo { get; set; }
         // public User User { get; set; }

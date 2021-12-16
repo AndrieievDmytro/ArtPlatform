@@ -10,6 +10,7 @@ namespace ArtPlatform.Models
     public class Promotion
     {
         [Required]
+        [Key]
         public int IdPromotion { get; set; }
         [Required]
         public string PromotionType { get; set; }
