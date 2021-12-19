@@ -1,12 +1,110 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    public class User
+    public class User : IncognitoUser
     {
+        [Required]
+        [Key]
+        public int IdUser { get; set; }
+
+        [Required]
+        [Key]
+        public string Nickname { get; set; }
+
+        public string FirstName { get; set; }
+
+        public string LastName { get; set; }
+
+        public string BioDesc { get; set; }
+
+        [Required]
+        [EmailAddress]
+        public string Email { get; set; }
+
+        [Required]
+        public string Password { get; set; }
+
+        [Required]
+        public DateTime RegDate { get; set; }
+
+        public List<Report> Reports { get; set; }
+
+        public List<Post> FavoritePosts { get; set; }
+
+        public List<Comment> LeftComments { get; set; }
+
+        public List<UserRating> SetRatings { get; set; }
+
+        public List<ArtWork> BoughtArtWorks { get; set; }
+
+        public User()
+        {
+        }
+
+        public User(int idUser, string nickname, string firstName, string lastName, string bioDesc, string email, string password, DateTime regDate)
+        {
+            IdUser = idUser;
+            Nickname = nickname;
+            FirstName = firstName;
+            LastName = lastName;
+            BioDesc = bioDesc;
+            Email = email;
+            Password = password;
+            RegDate = regDate;
+        }
+
+        public void LogOut()
+        {
+
+        }
+
+        public Artist CreateArtist()
+        {
+            return new Artist();
+        }
+
+        public void Report(Comment comment)
+        {
+            
+        }
+
+        public void EditProfile(string username, string email, string password, string passwordVerification)
+        {
+
+        }
+
+        public void DeleteProfile()
+        {
+
+        }
+
+        public void Ban(string reasonDesc)
+        {
+
+        }
+
+        public void ChangePassword(string password)
+        {
+
+        }
+
+        public void IssueWarning(int idPost, string warningType, string description)
+        {
+
+        }
+
+        public string searchByUsername(string username)
+        {
+            return "username";
+        }
+
+
     }
 }

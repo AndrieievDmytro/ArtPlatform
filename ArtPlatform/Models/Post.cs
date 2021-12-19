@@ -14,6 +14,11 @@ namespace ArtPlatform.Models {
         public int IdPost { get; set; }
         public string Description { get; set; }
 
+        public Post(int idPost)
+        {
+            IdPost = idPost;
+        }
+
         public Post(int idPost, string description) {
             IdPost = idPost;
             Description = description;
