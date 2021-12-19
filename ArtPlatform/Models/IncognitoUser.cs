@@ -6,7 +6,16 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    public class IncognitoUser
+    public abstract class IncognitoUser
     {
+        public void Login(string username, string password)
+        {
+
+        }
+
+        public void CreateUserProfile(string username, string email, string password, string passwordVerification)
+        {
+
+        }
     }
 }
