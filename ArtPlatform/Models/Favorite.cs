@@ -9,8 +9,10 @@ namespace ArtPlatform.Models {
 
     public class Favorite {
 
+        [Key]
         [Required]
         public User User { get; set; }
+        [Key]
         [Required]
         public Post Post { get; set; }
 

@@ -13,14 +13,14 @@ namespace ArtPlatform.Models {
         [Key]
         public int IdPost { get; set; }
         public string Description { get; set; }
-        public List<Comment> Comments { get; set; }
+        public List<Comment> Comments { get; }
 
         public Post(int idPost) {
             IdPost = idPost;
+            Comments = new List<Comment>();
         }
 
-        public Post(int idPost, string description) {
-            IdPost = idPost;
+        public Post(int idPost, string description) : this(idPost) {
             Description = description;
         }
 
@@ -33,7 +33,7 @@ namespace ArtPlatform.Models {
         }
 
         public void Comment(Comment comment) {
-
+            Comments.Add(comment);
         }
 
         public void DeletePost() {
