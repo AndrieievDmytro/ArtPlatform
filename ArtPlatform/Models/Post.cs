@@ -13,9 +13,9 @@ namespace ArtPlatform.Models {
         [Key]
         public int IdPost { get; set; }
         public string Description { get; set; }
+        public List<Comment> Comments { get; set; }
 
-        public Post(int idPost)
-        {
+        public Post(int idPost) {
             IdPost = idPost;
         }
 
