@@ -8,11 +8,13 @@ namespace ArtPlatform.Models
 {
     public class UserRating : Rating
     {
-        public UserRating(int idRating, decimal ratingValue, string description)
+        public UserRating(int idRating, decimal ratingValue, string description, User user, Post post)
         {
             IdRating = idRating;
             RatingValue = ratingValue;
             Description = description;
+            RelatedPost = post;
+            RelatedUser = user;
         }
     }
 }
