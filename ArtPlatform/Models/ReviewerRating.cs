@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ArtPlatform.Models
 {
-    class ReviewerRating : Rating
+    public class ReviewerRating : Rating
     {
         public ReviewerRating(int idRating, decimal ratingValue, string description, Post post, User user)
         {
