@@ -25,9 +25,9 @@ namespace ArtPlatform.Models
         [Required]
         public Post Post { get; set; }
 
-        public Comment(int IdComment)
+        public Comment(int idComment)
         {
-
+            IdComment = idComment;
         }
 
         public Comment(int idComment, string commentText, DateTime creationDate, Comment fatherComment, User user, Post post) : this(idComment)
