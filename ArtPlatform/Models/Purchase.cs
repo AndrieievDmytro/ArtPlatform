@@ -20,14 +20,16 @@ namespace ArtPlatform.Models
         public List<ArtWork> PurchasedArtworks { get; set; }
         [Required]
         public User Buyer { get; set; }
-        public Purchase(int idPurchase, decimal price, string state, List<ArtWork> purchasedArtworks, User buyer){
+        public Purchase(int idPurchase, decimal price, string state, List<ArtWork> purchasedArtworks, User buyer)
+        {
             IdPurchase = idPurchase;
             Price = price;
             State = state;
             PurchasedArtworks = purchasedArtworks;
-            Buyer = buyer;            
+            Buyer = buyer;
         }
-        public void CommitTransaction(){
+        public void CommitTransaction()
+        {
 
         }
         //Function ChangeState() I did not added because it is just setter

@@ -21,9 +21,9 @@ namespace ArtPlatform.Models
         public List<string> Photo { get; set; }
         // public User User { get; set; }
         public Artist Artist { get; set; }
-        public Post Post { get; set; }
+        public List<Post> Post { get; set; }
 
-        public ArtWork(int idArtwork, Artist artist, string artType, string description, List<string> video, List<string> photo, Post post)
+        public ArtWork(int idArtwork, Artist artist, string artType, string description, List<string> video, List<string> photo, List<Post> post)
         {
             IdArtwork = idArtwork;
             Artist = artist;
