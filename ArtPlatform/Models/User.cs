@@ -32,7 +32,16 @@ namespace ArtPlatform.Models
         public string Password { get; set; }
 
         [Required]
-        public DateTime RegDate { get; set; }
+        public DateTime RegDate { 
+            get { return _regDate; }
+            set
+            {
+                if (_regDate < DateTime.Now.AddDays(-1))
+                    _regDate = value;
+            }
+        }
+
+        private DateTime _regDate;
 
         public List<Report> Reports { get; set; }
 
@@ -58,6 +67,12 @@ namespace ArtPlatform.Models
             Email = email;
             Password = password;
             RegDate = regDate;
+
+            Reports = new List<Report>();
+            FavoritePosts = new List<Post>();
+            LeftComments = new List<Comment>();
+            SetRatings = new List<UserRating>();
+            BoughtArtWorks = new List<ArtWork>();
         }
 
         public void LogOut()
