@@ -13,9 +13,9 @@ namespace ArtPlatform.Models
 
         }
 
-        public void CreateUserProfile(string username, string email, string password, string passwordVerification)
+        public User CreateUserProfile(string username, string email, string password, string passwordVerification)
         {
-
+            return new User();
         }
     }
 }
