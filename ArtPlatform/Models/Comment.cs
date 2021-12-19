@@ -16,8 +16,25 @@ namespace ArtPlatform.Models
         [Required]
         public string CommentText { get; set; }
         [Required]
-        public DateTime CreationDate { get; set; }
-        public DateTime EditDate { get; set; }
+        public DateTime CreationDate { 
+            get { return _creationDate; }
+            set
+            {
+                if (_creationDate < DateTime.Now.AddDays(-1))
+                    _creationDate = value;
+            } 
+        }
+        private DateTime _creationDate;
+        public DateTime EditDate
+        {
+            get { return _editDate; }
+            set
+            {
+                if (value > _creationDate)
+                    _editDate = value;
+            }
+        }
+        private DateTime _editDate;
         public List<Comment> SubComments{ get; set; }
         public Comment FatherComment { get; set; }
         [Required]
@@ -25,9 +42,9 @@ namespace ArtPlatform.Models
         [Required]
         public Post Post { get; set; }
 
-        public Comment(int IdComment)
+        public Comment(int idComment)
         {
-
+            IdComment = idComment;
         }
 
         public Comment(int idComment, string commentText, DateTime creationDate, Comment fatherComment, User user, Post post) : this(idComment)
