@@ -16,5 +16,9 @@ namespace ArtPlatform.Models
         public decimal RatingValue { get; set; }
         [MaxLength(300)]
         public string Description{ get; set; }
+        [Required]
+        public User RelatedUser { get; set; }
+        [Required]
+        public Post RelatedPost  { get; set; }
     }
 }
