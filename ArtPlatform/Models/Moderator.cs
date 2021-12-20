@@ -9,21 +9,6 @@ namespace ArtPlatform.Models
 {
     public class Moderator : User
     {
-        [Required]
-        [Key]
-        public int IdUser { get; set; }
-        [Required]
-        public string Nickname { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string BioDesc { get; set; }
-        [Required]
-        [DataType(DataType.EmailAddress)]
-        public string Email { get; set; }
-        [DataType(DataType.Password)]
-        public string Password { get; set; }
-        public DateTime RegDate { get; set; }
-
         public Moderator(int idUser, string nickname, string firstName, string lastName, string bioDesc, string email, string password, DateTime regDate)
         {
             IdUser = idUser;
@@ -36,7 +21,7 @@ namespace ArtPlatform.Models
             RegDate = regDate;
         }
 
-        public void LogOut()
+        public override void LogOut()
         {
 
         }
@@ -51,17 +36,17 @@ namespace ArtPlatform.Models
 
         }
 
-        public void EditProfile(string usernmae, string email, string pasword, string passwordVerficiation)
+        public override void EditProfile(string usernmae, string email, string pasword, string passwordVerficiation)
         {
 
         }
 
-        public void DeleteProfile()
+        public override void DeleteProfile()
         {
 
         }
 
-        public void Ban(string reasonDesc)
+        public override void Ban(string reasonDesc)
         {
 
         }
@@ -71,7 +56,7 @@ namespace ArtPlatform.Models
 
         }
 
-        public void IssueWarning(int idPost, string warningType, string description)
+        public override void IssueWarning(int idPost, string warningType, string description)
         {
 
         }

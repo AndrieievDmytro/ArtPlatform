@@ -75,7 +75,7 @@ namespace ArtPlatform.Models
             BoughtArtWorks = new List<ArtWork>();
         }
 
-        public void LogOut()
+        public virtual void LogOut()
         {
 
         }
@@ -90,17 +90,17 @@ namespace ArtPlatform.Models
             
         }
 
-        public void EditProfile(string username, string email, string password, string passwordVerification)
+        public virtual void EditProfile(string username, string email, string password, string passwordVerification)
         {
 
         }
 
-        public void DeleteProfile()
+        public virtual void DeleteProfile()
         {
 
         }
 
-        public void Ban(string reasonDesc)
+        public virtual void Ban(string reasonDesc)
         {
 
         }
@@ -110,7 +110,7 @@ namespace ArtPlatform.Models
 
         }
 
-        public void IssueWarning(int idPost, string warningType, string description)
+        public virtual void IssueWarning(int idPost, string warningType, string description)
         {
 
         }
